@@ -149,6 +149,35 @@ nav a {
   gap: 1.25rem;
 }
 
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-button {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--forest);
+  border-radius: 999px;
+  color: var(--forest);
+  font: inherit;
+  font-weight: 650;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filter-button[aria-pressed="true"] {
+  color: white;
+  background: var(--forest);
+}
+
+.filter-status {
+  min-height: 1.6em;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .menu-card {
   padding: 1.5rem;
   border: 1px solid #e7e0d1;

@@ -32,20 +32,26 @@
       <section class="menu section" id="menu" aria-labelledby="menu-title">
         <p class="eyebrow">A few house favorites</p>
         <h2 id="menu-title">On the menu</h2>
+        <div class="menu-filters" role="group" aria-label="Filter menu items">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+          <button class="filter-button" type="button" data-filter="bakery" aria-pressed="false">Bakery</button>
+        </div>
+        <p class="filter-status" aria-live="polite">Showing all menu items.</p>
         <div class="menu-grid">
-          <article class="menu-card">
+          <article class="menu-card" data-category="coffee">
             <p class="menu-category">Coffee</p>
             <h3>Honey oat latte</h3>
             <p>Double espresso, steamed oat milk, and a touch of local honey.</p>
             <p class="price">$5.00</p>
           </article>
-          <article class="menu-card">
+          <article class="menu-card" data-category="coffee">
             <p class="menu-category">Coffee</p>
             <h3>House cold brew</h3>
             <p>Slow-steeped for a smooth, chocolatey finish. Served over ice.</p>
             <p class="price">$4.50</p>
           </article>
-          <article class="menu-card">
+          <article class="menu-card" data-category="bakery">
             <p class="menu-category">Bakery</p>
             <h3>Butter croissant</h3>
             <p>Flaky, golden layers baked fresh every morning.</p>
@@ -77,5 +83,6 @@
       <p>&copy; 2026 Neighborhood Cafe</p>
       <p>A friendly little place for your everyday.</p>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
