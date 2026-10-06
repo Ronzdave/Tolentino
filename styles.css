@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 1rem;
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -27,6 +31,27 @@ body {
 
 a {
   color: var(--forest);
+}
+
+a:focus-visible {
+  outline: 3px solid #b27416;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transform: translateY(-180%);
+  border-radius: 0.25rem;
+  color: white;
+  background: var(--forest);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .site-header {
@@ -196,4 +221,46 @@ address {
 
 .site-footer p {
   margin: 0.25rem;
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .hero {
+    min-height: 360px;
+    padding: 4rem 1.25rem;
+  }
+
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .menu-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card > p:not(.menu-category, .price) {
+    min-height: 0;
+  }
+
+  .hours div {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
